@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+        <div class="wrapper">
+          <div class="title">Login Form</div>
+          <form action="#">
+            <div class="field">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username"><br>
+            <div class="field">
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password"><br><br>
+            <input type="button" value="Submit" onclick="login()">
+            </div>
+            </div>
+            <br><br>
+          </form> 
+
+      <script>
+        let attempts = 0;
+      
+        function login() {
+          const username = document.getElementById('username').value;
+          const password = document.getElementById('password').value;
+      
+          while (attempts < 3) {
+            if (username == 'admin' && password == 'admin') {
+              // Login sukses, redirect ke halaman yang sesuai
+              alert('Login Sukses')
+              window.location.href = 'tabel.html';
+              return;
+            } else {
+              // Login gagal, tambahkan satu ke attempts
+              attempts++;
+              alert('Username atau password salah. Anda memiliki ' + (3 - attempts) + ' kesempatan login lagi.');
+              return;
+            }
+          }
+      
+          // Jika sudah mencoba login 3 kali dan tetap gagal, tampilkan pesan error
+          alert('Anda sudah mencoba login 3 kali dan gagal. Silakan coba lagi nanti.');
+        }
+      </script> 
+</body>
+</html>

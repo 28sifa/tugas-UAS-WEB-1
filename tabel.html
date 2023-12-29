@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <h1>DATA MODEL DAN MERK MOBIL</h1>
+      <input
+        class="search"
+        type="text"
+        id="ades"
+        onkeyup="search()"
+        placeholder="Search for names.."
+        title="Type in a name"
+      />
+      <button type="button" onclick="logout()">logout</button>
+    <br /><br />
+    <div class="box">
+      <input
+        class="add"
+        type="text"
+        class="merk"
+        name="merk"
+        placeholder="Merk/model mobil"
+      />
+      <button class="klik" type="button" class="merk" onclick="tambah()">Add</button>
+    </div>
+
+    <table id="tes"></table>
+    <table id="tabel"></table>
+    <script src="script.js"></script>
+  </body>
+</html>
